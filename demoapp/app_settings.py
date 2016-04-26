@@ -12,3 +12,4 @@ COOKIE_NAME = getattr(settings, 'DEMO_COOKIE_NAME', 'demo_session')
 # This make unauthorized use of cookie much harder.
 SALT_REQUEST_META_KEYS = getattr(
     settings, 'DEMO_SALT_REQUEST_META_KEYS', ['REMOTE_ADDR', 'HTTP_USER_AGENT'])
+UNPROTECTED_PATHS = getattr(settings, 'DEMO_UNPROTECTED_PATHS', [])
