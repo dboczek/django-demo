@@ -2,8 +2,9 @@ from setuptools import setup, find_packages
 import os
 import demoapp
 from pip.req import parse_requirements
+import pip
 
-requirements = parse_requirements('requirements.txt')
+requirements = parse_requirements('requirements.txt', session=pip.download.PipSession())
 requires = [str(item.req) for item in requirements]
 links = [str(item.url) for item in requirements if item.url is not None]
 
