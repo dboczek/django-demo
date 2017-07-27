@@ -1,5 +1,5 @@
 from demoapp.forms import DemoLoginForm
-from django.shortcuts import render_to_response
+from django.shortcuts import render
 from django.shortcuts import redirect
 from demoapp import app_settings
 from demoapp.utils import get_salt
@@ -14,4 +14,4 @@ def login_view(request):
             return response
     else:
         form = DemoLoginForm()
-    return render_to_response('demoapp/login.html', {'form': form})
+    return render(request, 'demoapp/login.html', {'form': form})
